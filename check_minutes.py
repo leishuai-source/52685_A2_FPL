@@ -1,4 +1,4 @@
-"""Compare the saved shortlist under several minimum-minutes rules."""
+# Compare the saved shortlist under several minimum-minutes rules.
 import json
 from pathlib import Path
 
