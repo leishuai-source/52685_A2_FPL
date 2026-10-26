@@ -63,7 +63,7 @@ Define dominance explicitly.
 
 Apply the rule with readable operations.
 
-- -`criteria.ge(row).all(axis=1)` finds alternatives that are no lower on every criterion. `criteria.gt(row).any(axis=1)` requires at least one strict advantage. Combining them identifies dominators. The script records their count and the lowest-ID example for a reproducible lookup. That example is not claimed to be the best replacement.
+-`criteria.ge(row).all(axis=1)` finds alternatives that are no lower on every criterion. `criteria.gt(row).any(axis=1)` requires at least one strict advantage. Combining them identifies dominators. The script records their count and the lowest-ID example for a reproducible lookup. That example is not claimed to be the best replacement.
 
 - Players with a zero dominator count form the *frontier*: the candidates not beaten under this precise rule. The default result is fourteen out of seventy-nine eligible midfielders. Increasing the number of criteria can retain more candidates, so this is not necessarily a small final recommendation list.
 
