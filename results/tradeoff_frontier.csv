@@ -1,0 +1,15 @@
+id,player,club,minutes,price,points_value,position_value,dominator_count,example_dominator_id,frontier
+605,Yalcouyé,BHA,236,4.5,1.694915,0.161864,0,,True
+183,Rudoni,COV,297,4.9,0.803958,0.125541,0,,True
+542,E.Le Fée,SUN,438,5.7,0.648882,0.122567,0,,True
+483,Ndoye,NFO,316,5.5,0.776755,0.112888,0,,True
+105,Anthony,BRE,267,5.9,0.85698,0.096553,0,,True
+68,Tavernier,BOU,424,6.1,1.078719,0.091169,0,,True
+268,King,FUL,425,5.5,0.924064,0.077005,0,,True
+460,Willock,NEW,284,5.0,1.394366,0.070352,0,,True
+127,Gomez,BHA,433,5.0,0.997691,0.065266,0,,True
+565,M.Sangaré,BRE,321,5.6,1.101469,0.053071,0,,True
+286,Belloumi,HUL,394,5.1,1.388474,0.051508,0,,True
+544,Xhaka,SUN,450,5.5,0.763636,0.050182,0,,True
+335,Stach,LEE,447,6.0,0.90604,0.042953,0,,True
+98,Janelt,BRE,450,5.0,1.12,0.0388,0,,True

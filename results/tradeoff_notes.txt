@@ -1,0 +1,25 @@
+FPL WEEK 4 / THREE-CRITERION COMPARISON
+Position: MID
+Snapshot: 2026-09-30T14:44:31Z
+Eligible: 79; frontier: 14
+
+ id    player club  minutes  price  points_value  position_value  dominator_count  example_dominator_id  frontier
+605  Yalcouyé  BHA      236    4.5        1.6949          0.1619                0                  <NA>      True
+183    Rudoni  COV      297    4.9        0.8040          0.1255                0                  <NA>      True
+542  E.Le Fée  SUN      438    5.7        0.6489          0.1226                0                  <NA>      True
+483     Ndoye  NFO      316    5.5        0.7768          0.1129                0                  <NA>      True
+105   Anthony  BRE      267    5.9        0.8570          0.0966                0                  <NA>      True
+ 68 Tavernier  BOU      424    6.1        1.0787          0.0912                0                  <NA>      True
+268      King  FUL      425    5.5        0.9241          0.0770                0                  <NA>      True
+460   Willock  NEW      284    5.0        1.3944          0.0704                0                  <NA>      True
+127     Gomez  BHA      433    5.0        0.9977          0.0653                0                  <NA>      True
+565 M.Sangaré  BRE      321    5.6        1.1015          0.0531                0                  <NA>      True
+286  Belloumi  HUL      394    5.1        1.3885          0.0515                0                  <NA>      True
+544     Xhaka  SUN      450    5.5        0.7636          0.0502                0                  <NA>      True
+335     Stach  LEE      447    6.0        0.9060          0.0430                0                  <NA>      True
+ 98    Janelt  BRE      450    5.0        1.1200          0.0388                0                  <NA>      True
+
+A dominates B only if A is at least as high on both values and minutes, and strictly higher on at least one.
+Exactly tied players do not dominate each other. The frontier is a set, not a final ranking.
+Minutes favour a larger observed sample; they do not establish future playing time or statistical certainty.
+The two plot axes show values; marker area shows minutes. No weighted score or prediction is used.

@@ -1,0 +1,25 @@
+FPL WEEK 4 / MINUTES SENSITIVITY
+Snapshot: 2026-09-30T14:44:31Z
+Position: MID; ranking: position; top_n: 8
+Price <= 6.5m; ownership <= 10%; status=a
+
+ minimum_minutes  eligible_players  shown_players  baseline_top_retained  new_top_entries
+             180                79              8                      8                0
+             270                56              8                      6                2
+             360                33              8                      4                4
+
+Original shortlist tracking:
+ id       player club  minutes  rank_at_180  rank_at_270  rank_at_360
+605     Yalcouyé  BHA      236            1         <NA>         <NA>
+183       Rudoni  COV      297            2            1         <NA>
+542     E.Le Fée  SUN      438            3            2            1
+483        Ndoye  NFO      316            4            3         <NA>
+105      Anthony  BRE      267            5         <NA>         <NA>
+ 68    Tavernier  BOU      424            6            4            2
+591       Enciso  IPS      413            7            5            3
+ 86 Lewis-Potter  BRE      406            8            6            4
+
+Only the eligibility cutoff changes. Scores and source statistics remain fixed.
+Blank ranks in the CSV / <NA> here mean the player does not qualify at that cutoff.
+The matrix tracks the original top players; minutes_shortlists.csv includes replacement names.
+Retention is agreement between settings, not evidence of future scoring accuracy.

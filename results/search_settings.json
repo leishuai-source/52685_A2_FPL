@@ -1,0 +1,9 @@
+{
+  "position": "MID",
+  "ranking": "position",
+  "max_price": 6.5,
+  "max_ownership": 10,
+  "min_minutes": 180,
+  "top_n": 8,
+  "snapshot_saved": "2026-09-30T14:44:31Z"
+}

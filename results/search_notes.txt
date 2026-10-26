@@ -1,0 +1,18 @@
+FPL WEEK 4: MID; ranking = position
+Snapshot saved: 2026-09-30T14:44:31Z
+Input players: 667; eligible: 79; showing: 8
+Filters: price <= 6.5m; ownership <= 10%; minutes >= 180; status=a
+Position measure: Expected goal involvement. Both scores are per 90 minutes divided by price.
+
+      player club  points_rank  position_rank  rank_improvement
+    Yalcouyé  BHA            1              1                 0
+      Rudoni  COV           23              2                21
+    E.Le Fée  SUN           41              3                38
+       Ndoye  NFO           28              4                24
+     Anthony  BRE           21              5                16
+   Tavernier  BOU            6              6                 0
+      Enciso  IPS           51              7                44
+Lewis-Potter  BRE           18              8                10
+
+Rank improvement = points rank - position rank. Positive means better position rank.
+Both rankings use the same snapshot and eligible pool. These are not gameweek changes or predictions.
