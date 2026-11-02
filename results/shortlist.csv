@@ -1,0 +1,15 @@
+id,player,club,position,price,ownership,minutes,total_points,expected_goals,expected_assists,clean_sheets,saves,points_per_90,points_value,measure,position_per_90,position_value,points_rank,position_rank,rank_improvement
+599,Cherif,COV,FWD,5.0,0.5,250,17,0.39,0.02,1,0,6.12,1.224,Expected goal involvement,0.1476,0.0295,1,12,-11
+316,Emersonn,IPS,FWD,5.5,3.2,599,33,2.67,0.19,0,0,4.9583,0.9015,Expected goal involvement,0.4297,0.0781,2,7,-5
+194,Thomas-Asante,COV,FWD,5.0,1.0,478,22,0.6,0.08,2,0,4.1423,0.8285,Expected goal involvement,0.128,0.0256,3,14,-11
+552,Brobbey,SUN,FWD,5.7,5.2,553,28,3.47,0.13,2,0,4.557,0.7995,Expected goal involvement,0.5859,0.1028,4,3,1
+224,Nketiah,CRY,FWD,5.4,0.4,269,12,1.13,0.63,0,0,4.0149,0.7435,Expected goal involvement,0.5888,0.109,5,2,3
+526,Solanke,TOT,FWD,5.8,1.5,440,21,1.9,0.14,2,0,4.2955,0.7406,Expected goal involvement,0.4173,0.0719,6,9,-3
+295,McBurnie,HUL,FWD,5.5,1.7,796,36,2.22,0.24,3,0,4.0704,0.7401,Expected goal involvement,0.2781,0.0506,7,11,-4
+249,Barry,EVE,FWD,5.6,7.4,682,30,5.08,0.17,3,0,3.9589,0.707,Expected goal involvement,0.6928,0.1237,8,1,7
+492,Awoniyi,COV,FWD,5.4,0.3,356,14,1.76,0.04,0,0,3.5393,0.6554,Expected goal involvement,0.4551,0.0843,9,6,3
+26,Havertz,ARS,FWD,7.4,5.5,669,33,2.77,0.43,5,0,4.4395,0.5999,Expected goal involvement,0.4305,0.0582,10,10,0
+401,Marmoush,TOT,FWD,7.0,2.7,589,22,0.88,0.33,4,0,3.3616,0.4802,Expected goal involvement,0.1849,0.0264,11,13,-2
+167,Delap,NFO,FWD,5.4,1.6,592,17,2.71,0.51,1,0,2.5845,0.4786,Expected goal involvement,0.4895,0.0907,12,5,7
+106,Thiago,BRE,FWD,7.8,9.2,802,32,4.06,1.26,3,0,3.591,0.4604,Expected goal involvement,0.597,0.0765,13,8,5
+569,Gonzalo,FUL,FWD,6.0,4.5,754,22,3.97,0.75,5,0,2.626,0.4377,Expected goal involvement,0.5634,0.0939,14,4,10

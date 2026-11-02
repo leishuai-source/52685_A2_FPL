@@ -1,0 +1,31 @@
+FPL / MINUTES SENSITIVITY
+Snapshot: 2026-11-02T00:33:13Z
+Position: FWD; ranking: points; top_n: 15
+Price <= 8.5m; ownership <= 10%; status=a
+
+ minimum_minutes  eligible_players  shown_players  baseline_top_retained  new_top_entries
+             250                14             14                     14                0
+             340                12             12                     12                0
+             430                11             11                     11                0
+
+Original shortlist tracking:
+ id        player club  minutes  rank_at_250  rank_at_340  rank_at_430
+599        Cherif  COV      250            1         <NA>         <NA>
+316      Emersonn  IPS      599            2            1            1
+194 Thomas-Asante  COV      478            3            2            2
+552       Brobbey  SUN      553            4            3            3
+224       Nketiah  CRY      269            5         <NA>         <NA>
+526       Solanke  TOT      440            6            4            4
+295      McBurnie  HUL      796            7            5            5
+249         Barry  EVE      682            8            6            6
+492       Awoniyi  COV      356            9            7         <NA>
+ 26       Havertz  ARS      669           10            8            7
+401      Marmoush  TOT      589           11            9            8
+167         Delap  NFO      592           12           10            9
+106        Thiago  BRE      802           13           11           10
+569       Gonzalo  FUL      754           14           12           11
+
+Only the eligibility cutoff changes. Scores and source statistics remain fixed.
+Blank ranks in the CSV / <NA> here mean the player does not qualify at that cutoff.
+The matrix tracks the original top players; minutes_shortlists.csv includes replacement names.
+Retention is agreement between settings, not evidence of future scoring accuracy.

@@ -1,0 +1,25 @@
+FPL SHORTLIST: FWD; ranking = points
+Snapshot saved: 2026-11-02T00:33:13Z
+Data note: Real FPL API response, saved for reproducible offline demonstration
+Input players: 670; eligible: 14; showing: 14
+Filters: price <= 8.5m; ownership <= 10%; minutes >= 250; status=a
+Position measure: Expected goal involvement. Both scores are per 90 minutes divided by price.
+
+       player club  points_rank  position_rank  rank_improvement
+       Cherif  COV            1             12               -11
+     Emersonn  IPS            2              7                -5
+Thomas-Asante  COV            3             14               -11
+      Brobbey  SUN            4              3                 1
+      Nketiah  CRY            5              2                 3
+      Solanke  TOT            6              9                -3
+     McBurnie  HUL            7             11                -4
+        Barry  EVE            8              1                 7
+      Awoniyi  COV            9              6                 3
+      Havertz  ARS           10             10                 0
+     Marmoush  TOT           11             13                -2
+        Delap  NFO           12              5                 7
+       Thiago  BRE           13              8                 5
+      Gonzalo  FUL           14              4                10
+
+Rank improvement = points rank - position rank. Positive means better position rank.
+Both rankings use the same snapshot and eligible pool. These are not gameweek changes or predictions.

@@ -1,0 +1,19 @@
+FPL / THREE-CRITERION COMPARISON
+Position: FWD
+Snapshot: 2026-11-02T00:33:13Z
+Eligible: 14; frontier: 8
+
+ id   player club  minutes  price  points_value  position_value  dominator_count  example_dominator_id  frontier
+249    Barry  EVE      682    5.6        0.7070          0.1237                0                  <NA>      True
+224  Nketiah  CRY      269    5.4        0.7435          0.1090                0                  <NA>      True
+552  Brobbey  SUN      553    5.7        0.7995          0.1028                0                  <NA>      True
+569  Gonzalo  FUL      754    6.0        0.4377          0.0939                0                  <NA>      True
+316 Emersonn  IPS      599    5.5        0.9015          0.0781                0                  <NA>      True
+106   Thiago  BRE      802    7.8        0.4604          0.0765                0                  <NA>      True
+295 McBurnie  HUL      796    5.5        0.7401          0.0506                0                  <NA>      True
+599   Cherif  COV      250    5.0        1.2240          0.0295                0                  <NA>      True
+
+A dominates B only if A is at least as high on both values and minutes, and strictly higher on at least one.
+Exactly tied players do not dominate each other. The frontier is a set, not a final ranking.
+Minutes favour a larger observed sample; they do not establish future playing time or statistical certainty.
+The two plot axes show values; marker area shows minutes. No weighted score or prediction is used.

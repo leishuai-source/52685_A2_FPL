@@ -1,0 +1,9 @@
+id,player,club,minutes,price,points_value,position_value,dominator_count,example_dominator_id,frontier
+249,Barry,EVE,682,5.6,0.706954,0.123717,0,,True
+224,Nketiah,CRY,269,5.4,0.743494,0.109046,0,,True
+552,Brobbey,SUN,553,5.7,0.799467,0.102789,0,,True
+569,Gonzalo,FUL,754,6.0,0.437666,0.093899,0,,True
+316,Emersonn,IPS,599,5.5,0.901503,0.07813,0,,True
+106,Thiago,BRE,802,7.8,0.460387,0.076539,0,,True
+295,McBurnie,HUL,796,5.5,0.740064,0.050571,0,,True
+599,Cherif,COV,250,5.0,1.224,0.02952,0,,True

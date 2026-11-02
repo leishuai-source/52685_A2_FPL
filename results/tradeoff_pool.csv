@@ -1,0 +1,15 @@
+id,player,club,minutes,price,points_value,position_value,dominator_count,example_dominator_id,frontier
+26,Havertz,ARS,669,7.4,0.599927,0.058175,1,249,False
+106,Thiago,BRE,802,7.8,0.460387,0.076539,0,,True
+167,Delap,NFO,592,5.4,0.478604,0.090653,1,249,False
+194,Thomas-Asante,COV,478,5.0,0.828452,0.025607,1,316,False
+224,Nketiah,CRY,269,5.4,0.743494,0.109046,0,,True
+249,Barry,EVE,682,5.6,0.706954,0.123717,0,,True
+295,McBurnie,HUL,796,5.5,0.740064,0.050571,0,,True
+316,Emersonn,IPS,599,5.5,0.901503,0.07813,0,,True
+401,Marmoush,TOT,589,7.0,0.480233,0.026413,4,26,False
+492,Awoniyi,COV,356,5.4,0.655431,0.08427,2,249,False
+526,Solanke,TOT,440,5.8,0.740596,0.071944,2,316,False
+552,Brobbey,SUN,553,5.7,0.799467,0.102789,0,,True
+569,Gonzalo,FUL,754,6.0,0.437666,0.093899,0,,True
+599,Cherif,COV,250,5.0,1.224,0.02952,0,,True

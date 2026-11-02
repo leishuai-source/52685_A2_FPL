@@ -1,0 +1,11 @@
+{
+  "position": "FWD",
+  "ranking": "points",
+  "max_price": 8.5,
+  "max_ownership": 10,
+  "min_minutes": 250,
+  "top_n": 15,
+  "snapshot_saved": "2026-11-02T00:33:13Z",
+  "snapshot_sha256": "53aa3b7bc39fb841d8ef6e3a493c5428bf99f6aa5fb5c5ac4240bbe9d95a17ad",
+  "data_note": "Real FPL API response, saved for reproducible offline demonstration"
+}
