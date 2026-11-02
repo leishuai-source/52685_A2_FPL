@@ -1,10 +1,10 @@
 {
   "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
-  "retrieved_utc": "2026-09-30T14:44:31Z",
+  "retrieved_utc": "2026-11-02T00:33:13Z",
   "data_type": "Real FPL API response, saved for reproducible offline demonstration",
-  "player_count": 667,
+  "player_count": 670,
   "current_event_ids": [
-    5
+    9
   ],
-  "sha256": "d75fed6b941bd27dbc18385a4b10eadddd9ccb2d5e77a79bc6344eed5e7bc80b"
+  "sha256": "53aa3b7bc39fb841d8ef6e3a493c5428bf99f6aa5fb5c5ac4240bbe9d95a17ad"
 }
