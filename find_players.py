@@ -1,3 +1,5 @@
+# Find players in a saved Fantasy Premier League snapshot who meet the criteria in preferences.json.
+
 import json
 from pathlib import Path
 
