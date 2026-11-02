@@ -1,4 +1,5 @@
 # Collect the saved tables and plots into a local, shareable review page.
+
 from pathlib import Path
 from html import escape
 import json
