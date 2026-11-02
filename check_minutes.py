@@ -1,4 +1,4 @@
-# Compare the saved shortlist under several minimum-minutes rules.
+# Compare the saved shortlist under several minimum-minutes rules."""
 import json
 from pathlib import Path
 
@@ -15,9 +15,9 @@ players = players.sort_values(rank_column)
 top_n = settings["top_n"]
 baseline = players.head(top_n)
 
-# These cutoffs fit the included snapshot, whose maximum minutes is 450.
+# Raise the configured floor by one and two full matches (90 minutes each).
 # Do not use a cutoff below the original filter: those players are absent from the CSV.
-minutes_to_compare = [180, 270, 360]
+minutes_to_compare = [settings["min_minutes"] + 90, settings["min_minutes"] + 180]
 thresholds = sorted(set([settings["min_minutes"]] + [
     n for n in minutes_to_compare if n >= settings["min_minutes"]]))
 
@@ -74,11 +74,11 @@ if tracking.empty:
 fig.text(0.04, 0.04, f"Original top {len(baseline)} under {settings['ranking']} ranking · numbers are ranks in each eligible pool\n"
          f"out = below the minutes cutoff · snapshot {settings['snapshot_saved'][:10]} · not a forecast", fontsize=9)
 fig.tight_layout(rect=(0.02, 0.12, 0.98, 0.98))
-fig.savefig(results / "minutes_comparison.png", dpi=300)
+fig.savefig(results / "minutes_comparison.png", dpi=220)
 plt.close(fig)
 
 # Keep the experiment's settings beside the results so the comparison is traceable.
-report = (f"FPL WEEK 4 / MINUTES SENSITIVITY\n"
+report = (f"FPL / MINUTES SENSITIVITY\n"
           f"Snapshot: {settings['snapshot_saved']}\n"
           f"Position: {settings['position']}; ranking: {settings['ranking']}; top_n: {top_n}\n"
           f"Price <= {settings['max_price']}m; ownership <= {settings['max_ownership']}%; status=a\n\n"
