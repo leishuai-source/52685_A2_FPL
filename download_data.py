@@ -1,3 +1,5 @@
+# Download current FPL data from the public API and save it for offline analysis.
+
 import json
 import hashlib
 from datetime import datetime, timezone
@@ -10,7 +12,6 @@ folder = Path(__file__).resolve().parent / "dataset"
 folder.mkdir(exist_ok=True)
 
 # Download the current data from the public FPL API.
-# This optional step replaces the saved snapshot; it is not needed for the included demo.
 url = "https://fantasy.premierleague.com/api/bootstrap-static/"
 response = requests.get(url, timeout=30)
 # Stop on an HTTP failure so an error page is not saved as player data.
