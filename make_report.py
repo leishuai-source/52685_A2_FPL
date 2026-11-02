@@ -38,7 +38,7 @@ for title, image, explanation in [
     ('Value and recorded minutes', 'tradeoff_comparison.png', 'A player is dominated only if another is at least as high on all three criteria and strictly higher on one. The frontier is a set, not a forecast.')]:
     page += '<h2>' + title + '</h2><p>' + explanation + '</p><img src="' + image + '" alt="' + title + '">'
 page += '<h2>Minutes experiment</h2><div class="scroll">' + minutes.to_html(index=False, border=0) + '</div>'
-page += '<h2>Inspect the evidence</h2><p><a href="shortlist.csv">All eligible players</a> · <a href="tradeoff_pool.csv">Dominance evidence</a> · <a href="search_settings.json">Run settings</a> · <a href="../FEEDBACK.md">Reviewer worksheet</a></p>'
+page += '<h2>Inspect the evidence</h2><p><a href="shortlist.csv">All eligible players</a> · <a href="tradeoff_pool.csv">Dominance evidence</a> · <a href="search_settings.json">Run settings</a></p>'
 page += '<p>Click on above links to export the result CSVs.</p></body></html>'
 (results / 'review.html').write_text(page, encoding='utf-8')
 print('Wrote results/review.html')
