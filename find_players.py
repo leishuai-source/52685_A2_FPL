@@ -5,17 +5,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 
-# Keep the Week 1 limits so the effect of the new measure can be compared fairly.
-# Choose GK, DEF, MID or FWD. Ranking can be "points" or "position".
-position = "MID"
-ranking = "position"
-max_price = 6.5
-max_ownership = 10
-min_minutes = 180
-top_n = 8
-
-# Read the saved response and its source date; running this file needs no API call.
+# Change preferences.json to try another position or budget, then run run_finder.py.
+# Keeping configuration in one place means every comparison uses the same pool.
 folder = Path(__file__).resolve().parent
+preferences = json.loads((folder / "preferences.json").read_text(encoding="utf-8"))
+position = preferences["position"]
+ranking = preferences["ranking"]
+max_price = preferences["max_price"]
+max_ownership = preferences["max_ownership"]
+min_minutes = preferences["min_minutes"]
+top_n = preferences["top_n"]
+
+# The saved response lets the whole analysis run offline.
 snapshot = json.loads((folder / "dataset/fpl_snapshot.json").read_text(encoding="utf-8"))
 metadata = json.loads((folder / "dataset/fpl_snapshot.metadata.json").read_text(encoding="utf-8"))
 players = pd.DataFrame(snapshot["elements"])
@@ -41,11 +42,11 @@ shortlist = players[(players["position"] == position)
                     & (players["minutes"] >= min_minutes) & (players["minutes"] > 0)
                     & (players["status"] == "a")].copy()
 
-# Retain the Week 1 score as a baseline: output per 90 minutes, divided by price.
+# Use points as the baseline: output per 90 minutes, divided by price.
 shortlist["points_per_90"] = shortlist["total_points"] * 90 / shortlist["minutes"]
 shortlist["points_value"] = shortlist["points_per_90"] / shortlist["price"]
 
-# New in Week 2: use a supporting measure suited to the selected position.
+# Use a supporting measure suited to the selected position.
 # MID/FWD use expected goal involvement. DEF use clean sheets. GK use saves.
 # These are simple exploratory indicators; they do not capture every part of a role.
 if position in ["MID", "FWD"]:
@@ -80,10 +81,11 @@ top = shortlist.head(top_n)
 # Save both scores and ranks, so each displayed result can be traced to its inputs.
 results = folder / "results"
 results.mkdir(exist_ok=True)
-# Week 3 records the run settings so check_minutes.py uses the same ranking and pool.
+# Record the run settings so check_minutes.py uses the same ranking and pool.
 settings = {"position": position, "ranking": ranking, "max_price": max_price,
             "max_ownership": max_ownership, "min_minutes": min_minutes, "top_n": top_n,
-            "snapshot_saved": metadata["retrieved_utc"]}
+            "snapshot_saved": metadata["retrieved_utc"], "snapshot_sha256": metadata["sha256"],
+            "data_note": metadata["data_type"]}
 (results / "search_settings.json").write_text(json.dumps(settings, indent=2), encoding="utf-8")
 columns = ["id", "player", "club", "position", "price", "ownership", "minutes", "total_points",
            "expected_goals", "expected_assists", "clean_sheets", "saves", "points_per_90",
@@ -92,8 +94,9 @@ columns = ["id", "player", "club", "position", "price", "ownership", "minutes", 
 shortlist[columns].round(4).to_csv(results / "shortlist.csv", index=False)
 comparison = shortlist[["player", "club", "points_rank", "position_rank", "rank_improvement"]]
 comparison.to_csv(results / "rank_comparison.csv", index=False)
-report = (f"FPL WEEK 4: {position}; ranking = {ranking}\n"
+report = (f"FPL SHORTLIST: {position}; ranking = {ranking}\n"
           f"Snapshot saved: {metadata['retrieved_utc']}\n"
+          f"Data note: {metadata['data_type']}\n"
           f"Input players: {len(players)}; eligible: {len(shortlist)}; showing: {len(top)}\n"
           f"Filters: price <= {max_price}m; ownership <= {max_ownership}%; minutes >= {min_minutes}; status=a\n"
           f"Position measure: {measure}. Both scores are per 90 minutes divided by price.\n\n"
@@ -103,7 +106,7 @@ report = (f"FPL WEEK 4: {position}; ranking = {ranking}\n"
 (results / "search_notes.txt").write_text(report, encoding="utf-8")
 print(report)
 
-# Keep the Week 1 dot-chart style, with units matching the chosen ranking method.
+# Use a dot chart, with units matching the chosen ranking method.
 plt.rcParams.update({"axes.titlesize": 14, "axes.titleweight": "bold",
                      "axes.labelsize": 12, "axes.labelweight": "bold"})
 fig, ax = plt.subplots(figsize=(10, 6.5), facecolor="#f5f1e8")
@@ -125,7 +128,9 @@ ax.tick_params(axis="y", length=0, pad=12)
 fig.text(0.04, 0.04, f"Saved snapshot {metadata['retrieved_utc'][:10]} · {len(shortlist)} eligible · {len(top)} shown\n"
          f"Price ≤ £{max_price}m · ownership ≤ {max_ownership}% · minutes ≥ {min_minutes}", fontsize=9)
 fig.tight_layout(rect=(0.02, 0.12, 0.98, 0.98))
-fig.savefig(results / "value_shortlist.png", dpi=300)
+if top.empty:
+    ax.text(0.5, 0.5, "No players match these filters", transform=ax.transAxes, ha="center")
+fig.savefig(results / "value_shortlist.png", dpi=220)
 plt.close(fig)
 
 # New comparison chart: joined dots show how the two methods rank these same players.
@@ -147,5 +152,7 @@ ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.18), ncol=2, frameon=False
 fig.text(0.04, 0.025, f"Top {len(top)} under {ranking} ranking · {measure} supports the position ranking\n"
          "Rank differences reflect the scoring method, not changes over time.", fontsize=9)
 fig.tight_layout(rect=(0.02, 0.10, 0.98, 0.98))
-fig.savefig(results / "ranking_comparison.png", dpi=300)
+if top.empty:
+    ax.text(0.5, 0.5, "No players match these filters", transform=ax.transAxes, ha="center")
+fig.savefig(results / "ranking_comparison.png", dpi=220)
 plt.close(fig)
