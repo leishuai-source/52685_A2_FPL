@@ -1,4 +1,4 @@
-# Week 4: find players not beaten on both value measures and recorded minutes.
+# Find players not beaten on both value measures and recorded minutes."""
 import json
 from pathlib import Path
 import pandas as pd
@@ -40,7 +40,7 @@ columns = ["id", "player", "club", "minutes", "price", "points_value", "position
            "dominator_count", "example_dominator_id", "frontier"]
 players[columns].round(6).to_csv(results / "tradeoff_pool.csv", index=False)
 frontier[columns].round(6).to_csv(results / "tradeoff_frontier.csv", index=False)
-text = (f"FPL WEEK 4 / THREE-CRITERION COMPARISON\nPosition: {settings['position']}\n"
+text = (f"FPL / THREE-CRITERION COMPARISON\nPosition: {settings['position']}\n"
         f"Snapshot: {settings['snapshot_saved']}\nEligible: {len(players)}; frontier: {len(frontier)}\n\n"
         + frontier[columns].round(4).to_string(index=False) + "\n\n"
         "A dominates B only if A is at least as high on both values and minutes, and strictly higher on at least one.\n"
@@ -52,11 +52,11 @@ print(text)
 
 # A third criterion can keep a lower-value player on the frontier if they have more minutes.
 plt.rcParams.update({"axes.titlesize": 14, "axes.titleweight": "bold", "axes.labelsize": 12, "axes.labelweight": "bold"})
-fig, ax = plt.subplots(figsize=(11, 7), facecolor="#f5f1e8")
+fig, ax = plt.subplots(figsize=(11, max(7, 2.7 + len(frontier) * 0.28)), facecolor="#f5f1e8")
 ax.set_facecolor("#f5f1e8")
 other = players[~players.frontier]
-ax.scatter(other.points_value, other.position_value, s=other.minutes * 0.4, color="#c9c0ad", alpha=0.55, label="Dominated on the three criteria")
-ax.scatter(frontier.points_value, frontier.position_value, s=frontier.minutes * 0.4,
+ax.scatter(other.points_value, other.position_value, s=other.minutes.to_numpy(dtype=float) * 0.4, color="#c9c0ad", alpha=0.55, label="Dominated on the three criteria")
+ax.scatter(frontier.points_value, frontier.position_value, s=frontier.minutes.to_numpy(dtype=float) * 0.4,
            color="#285440", edgecolor="white", linewidth=0.8, label="Three-criterion frontier")
 # Numbered labels stay compact; the matching names are listed beside the plot.
 for number, row in enumerate(frontier.itertuples(), 1):
@@ -71,5 +71,5 @@ ax.spines[["top", "right"]].set_visible(False)
 ax.legend(loc="upper left", fontsize=9, frameon=False)
 fig.text(0.06, 0.04, f"Same {len(players)} eligible players as the saved shortlist | snapshot {settings['snapshot_saved'][:10]}\nMarker area is proportional to minutes; frontier membership is not a future-points forecast.", fontsize=9)
 fig.tight_layout(rect=(0.02, 0.12, 0.69, 0.98))
-fig.savefig(results / "tradeoff_comparison.png", dpi=300)
+fig.savefig(results / "tradeoff_comparison.png", dpi=220)
 plt.close(fig)
