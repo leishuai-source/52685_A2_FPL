@@ -11,6 +11,7 @@ python -m venv .venv
 ```
 
 For Windows, use `.venv\Scripts\activate` to activate python environment. 
+
 For macOS use `source .venv/bin/activate`
 
 Then run this:
