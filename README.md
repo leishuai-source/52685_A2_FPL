@@ -7,6 +7,15 @@ A Python tool for shortlisting Fantasy Premier League players by position, price
 Use Python 3.12. From the project folder:
 
 ```bash
+python -m venv .venv
+```
+
+For Windows, use `.venv\Scripts\activate` to activate python environment. 
+For macOS use `.venv\Scripts\activate`
+
+Then run this:
+
+```bash
 python -m pip install -r requirements.txt
 python run_finder.py
 ```
